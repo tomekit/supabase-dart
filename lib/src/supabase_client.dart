@@ -228,7 +228,7 @@ class SupabaseClient {
   }
 
   Map<String, String> _getAuthHeaders() {
-    final authBearer = auth.currentSession?.accessToken ?? supabaseKey;
+    final authBearer = auth.currentSession?.accessToken;
     final defaultHeaders = {
       'apikey': supabaseKey,
       'Authorization': 'Bearer $authBearer',
